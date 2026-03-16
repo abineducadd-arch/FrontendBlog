@@ -10,7 +10,8 @@ const PostCard = () => {
   useEffect(() => {
     API.get("/api/v1/blog/")
       .then((res) => {
-        setBlog(res.data);
+        // fix here
+        setBlog(res.data.results);
       })
       .catch((err) => console.log(err));
   }, []);
