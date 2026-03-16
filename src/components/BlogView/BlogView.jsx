@@ -7,7 +7,7 @@ const BlogView = () => {
   const [blog, setBlog] = useState([]);
 
   const BASE_URL = import.meta.env.VITE_API_BASE_URL_DEPLOY;
-
+  console.log(BASE_URL)
   useEffect(() => {
     API.get("/api/v1/blog/")
       .then((res) => {
