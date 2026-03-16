@@ -6,6 +6,8 @@ const BlogView = () => {
 
   const [blog, setBlog] = useState([]);
 
+  const BASE_URL = import.meta.env.VITE_API_BASE_URL_DEPLOY;
+
   useEffect(() => {
     API.get("/api/v1/blog/")
       .then((res) => {
@@ -21,27 +23,31 @@ const BlogView = () => {
 
       <div className="blog-grid">
 
-        {blog.map((item) => (
+        {blog.map((item) => {
 
-          <div className="blog-card" key={item.id}>
+          const imageUrl = item.img
+            ? item.img.startsWith("http")
+              ? item.img
+              : `${BASE_URL}${item.img}`
+            : "https://via.placeholder.com/400x250";
 
-            <img
-              src={`${import.meta.env.VITE_API_BASE_URL_DEPLOY}${item.img}`}
-              alt={item.caption}
-              className="blog-image"
-            />
+          return (
+            <div className="blog-card" key={item.id}>
 
-            <div className="blog-content">
+              <img
+                src={imageUrl}
+                alt={item.caption}
+                className="blog-image"
+              />
 
-              <h3>{item.caption}</h3>
-
-              <p>{item.des}</p>
+              <div className="blog-content">
+                <h3>{item.caption}</h3>
+                <p>{item.des}</p>
+              </div>
 
             </div>
-
-          </div>
-
-        ))}
+          );
+        })}
 
       </div>
 
