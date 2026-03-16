@@ -1,0 +1,33 @@
+.aside-container{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    font-family:'Poppins', sans-serif;
+}
+
+.aside-card{
+    padding:20px;
+    border-radius:10px;
+    background:#fafafa;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.aside-card h2{
+    font-family:'Merriweather', serif;
+}
+
+.aside-card ul{
+    margin-top:10px;
+}
+
+.aside-card li{
+    margin-bottom:8px;
+    cursor:pointer;
+}
+
+.search-box input{
+    width:100%;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ddd;
+}

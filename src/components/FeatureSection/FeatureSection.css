@@ -1,0 +1,21 @@
+/* Main Feature Section Layout */
+
+.feature-section{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+
+    display:grid;
+    grid-template-columns: 3fr 1fr;   /* Blog area + Sidebar */
+    gap:30px;
+}
+
+/* Responsive Layout */
+
+@media (max-width:900px){
+
+    .feature-section{
+        grid-template-columns:1fr;
+    }
+
+}

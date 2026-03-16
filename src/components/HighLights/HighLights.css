@@ -1,0 +1,26 @@
+.highlight-section{
+    margin-top:60px;
+    text-align:center;
+    font-family:'Poppins', sans-serif;
+}
+
+.highlight-buttons{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.highlight-buttons button{
+    padding:12px 25px;
+    border-radius:25px;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:500;
+}
+
+.highlight-buttons button:hover{
+    transform:scale(1.05);
+}

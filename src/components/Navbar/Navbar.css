@@ -1,0 +1,62 @@
+.auth-navbar{
+    width: 85%;
+    margin: auto;
+    padding: 18px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Logo */
+
+.logo img{
+    height: 45px;
+}
+
+/* Navigation Links */
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: #000;
+}
+
+/* Register Button */
+
+.register-btn{
+    background: black;
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+/* Logout Button */
+
+.logout-btn{
+    background: black;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logout-btn:hover{
+    opacity: 0.9;
+}

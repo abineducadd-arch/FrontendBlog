@@ -1,0 +1,68 @@
+.categories-container{
+    width:90%;
+    margin:auto;
+    font-family:'Poppins', sans-serif;
+}
+
+/* section titles */
+
+.categories-container h2{
+    margin-top:50px;
+    margin-bottom:20px;
+    color:#333;
+    border-left:5px solid #0077ff;
+    padding-left:12px;
+    font-family:'Merriweather', serif;
+    font-size:26px;
+}
+
+/* grid layout */
+
+.post-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;
+}
+
+/* card */
+
+.post-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
+    cursor:pointer;
+}
+
+/* hover animation */
+
+.post-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* image */
+
+.post-card img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+}
+
+/* caption */
+
+.post-card h3{
+    padding:14px;
+    font-size:18px;
+    font-family:'Merriweather', serif;
+}
+
+/* description */
+
+.post-card p{
+    padding:0 14px 18px;
+    font-size:14px;
+    color:#555;
+    line-height:1.6;
+}
