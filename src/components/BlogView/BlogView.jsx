@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import API from "../../data/axios";
-import './BlogView.css'
+import "./BlogView.css";
 
 const BlogView = () => {
+
   const [blog, setBlog] = useState([]);
 
   useEffect(() => {
-    API.get("api/v1/blog/")
-      .then((res) => setBlog(res.data))
+    API.get("/api/v1/blog/")
+      .then((res) => {
+        setBlog(res.data);
+      })
       .catch((err) => console.log(err));
   }, []);
 
@@ -19,20 +22,25 @@ const BlogView = () => {
       <div className="blog-grid">
 
         {blog.map((item) => (
+
           <div className="blog-card" key={item.id}>
 
             <img
-              src={item.img}
+              src={`${import.meta.env.VITE_API_BASE_URL_DEPLOY}${item.img}`}
               alt={item.caption}
               className="blog-image"
             />
 
             <div className="blog-content">
+
               <h3>{item.caption}</h3>
+
               <p>{item.des}</p>
+
             </div>
 
           </div>
+
         ))}
 
       </div>
